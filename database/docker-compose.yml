@@ -1,0 +1,21 @@
+version: "3.9"
+services:
+  db:
+    image: mysql:latest
+    container_name: db
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: seriesdb
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./bd/init.sql:/docker-entrypoint-initdb.d/init.sql
+
+  backend:
+    build:
+      context: ../Backend
+    container_name: backend
+    ports:
+      - "8080:8080"
+    depends_on:
+      - db
