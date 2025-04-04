@@ -14,7 +14,6 @@ Este proyecto es una API para gestionar series de televisión. Permite realizar 
 3. [Rutas API](#rutas-api)
 4. [Tecnologías](#tecnologías)
 5. [Contribución](#contribución)
-6. [Licencia](#licencia)
 
 ---
 
@@ -126,11 +125,6 @@ Una vez que el servidor esté corriendo, puedes usar herramientas como **Postman
 
 ---
 
-## Licencia
-
-Este proyecto está licenciado bajo la Licencia MIT - mira el archivo [LICENSE](LICENSE) para más detalles.
-
----
 
 ### Consejos para personalizar el README:
 - **Descripción del proyecto**: Intenta ser breve pero explicativo, explicando qué hace tu proyecto, cómo se usa y qué beneficios ofrece.
