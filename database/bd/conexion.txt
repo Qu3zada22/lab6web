@@ -1,0 +1,17 @@
+package bd
+
+import (
+	"gorm.io/gorm"
+	"gorm.io/driver/postgres"
+	"fmt"
+)
+
+func Connect() (*gorm.DB, error) {
+	// DSN (Data Source Name) para conectar con la base de datos
+	dsn := "host=localhost user=postgres dbname=seriesdb password=yourpassword port=5432 sslmode=disable"
+	db, err := gorm.Open(postgres.Open(dsn), &gorm.Config{})
+	if err != nil {
+		return nil, fmt.Errorf("failed to connect to the database: %w", err)
+	}
+	return db, nil
+}
